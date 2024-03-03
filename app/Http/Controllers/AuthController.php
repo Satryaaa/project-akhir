@@ -25,7 +25,7 @@ class AuthController extends Controller
             Trigerlogin::create([
                 'id_user'=>Auth::user()->id
             ]);
-            return redirect('/explore');
+            return redirect('/explore')->with('success', 'Login Berhasil');
         } else {
             return redirect()->back()->with('error', 'Email atau Password salah');
         }

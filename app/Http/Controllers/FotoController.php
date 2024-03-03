@@ -25,7 +25,7 @@ class FotoController extends Controller
             'deskripsi_foto'  => $request->input('deskripsi'),
             'url'   => $foto_nama,
             'user_id' => Auth::user()->id,
-            'album_id' => $request->album
+            'album_id' => $request->album_id
         ];
 
         $validate = Foto::create($data);
@@ -36,8 +36,31 @@ class FotoController extends Controller
         } else {
             return redirect()->back();
         }
+     }
 
+     public function viewEditFoto ($id) {
+        $data = Foto::find($id);
+        return view('page.editfoto', compact('data'));
+     }
 
+     public function processEditFoto (Request $request, $id) {
 
+        $data = Foto::find($id);
+
+        $request->validate([
+            'judul_foto' => 'required',
+            'deskripsi_foto' => 'required'
+        ]);
+
+        $data->judul_foto = $request->judul_foto;
+        $data->deskripsi_foto = $request->deskripsi_foto;
+        $data->save();
+        return redirect()->back()->with('success', 'Postingan Berhasil Diedit');
+     }
+
+     public function deleteFoto($id){
+        $data = Foto::find($id);
+        $data->delete();
+        return redirect()->back()->with('success', 'Postingan Berhasil Dihapus');
      }
 }

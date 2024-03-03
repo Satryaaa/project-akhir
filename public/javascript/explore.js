@@ -85,7 +85,7 @@ const getExplore =()=>{
                             <a href="/explore-detail/${x.id}">
                             <span class="bi bi-chat-left-text"></span></a>
                             <small>${x.jml_like}</small>
-                            <span class="bi ${x.idUserLike === x.useractive ? 'bi-heart-fill text-red-700': 'bi-heart'}" onclick="likes(this, ${x.id})"></span>
+                            <span class="bi ${x.idUserLike == x.useractive ? 'bi-heart-fill text-red-700': 'bi-heart'}" onclick="likes(this, ${x.id})"></span>
                         </div>
                     </div>
                 </div>
@@ -107,6 +107,7 @@ function likes(txt, id){
         },
         success: function(res){
             console.log(res)
+            location.reload()
         },
         error: function(jqXHR, textStatus, errorThrown){
             alert('gagal')

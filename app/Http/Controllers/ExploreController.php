@@ -19,7 +19,7 @@ class ExploreController extends Controller
         return response()->json([
             'data' =>$explore,
             'statuscode' => 200,
-            'Userid'     => auth()->user()->id
+            'idUser'     => auth()->user()->id
         ]);
     }
 

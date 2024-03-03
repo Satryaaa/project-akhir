@@ -20,14 +20,11 @@
               <img src="img/hero_1.jpg" alt="" class="mr-3 w-8 h-7 rounded-full">
             <h2 class="text-3xl font-playfair">PickSat</h2>
         </div>
-        <div>
-          <button type="submit"
-          class=" text-white bg-blue-800 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-          <a href="/login">Login</a></button>
-          <button type="submit"
-          class=" bg-gray-500 py-2 px-2 rounded-full text-white">
-          <a href="/register">Register</a>
-        </button>
+        <div >
+
+          <a href="/login" class="px-3"><b>LOGIN</b></a>
+
+          <a href="/register" class="px-3"><b>REGISTER</b></a>
         </div>
     </div>
     </nav>

@@ -8,7 +8,7 @@
 
     <section class="mt-32">
         <div class="items-center max-w-screen-md mx-auto ">
-            <h3 class="text-5xl text-center font-hurricane">PinMe</h3>
+            <h3 class="text-5xl text-center font-hurricane"></h3>
         </div>
     </section>
     <section>

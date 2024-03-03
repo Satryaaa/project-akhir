@@ -82,7 +82,7 @@ const getExplore =()=>{
                                     ${x.judul}
                                 </div>
                                 <div class="text-xs text-abuabu">
-                                    ${x.tanggal}
+                                ${moment(x.tanggal).format('DD/MM/YYYY')}
                                 </div>
                             </div>
                         </div>

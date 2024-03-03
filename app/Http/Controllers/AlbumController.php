@@ -49,6 +49,11 @@ class AlbumController extends Controller
 
 
     }
+    public function hapusAlbum($id){
+        $album = Album::where('id', $id)->first();
+        $album->delete();
 
+        return redirect()->back()->with('success', 'Album Berhasil Dihapus');
+    }
 
 }

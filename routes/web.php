@@ -41,6 +41,8 @@ Route::middleware('auth')->group(function(){
     Route::get('/explore-detail/{id}', function () {
         return view('page.explore-detail');
     });
+    Route::get('/deleteFoto/{id}', [FotoController::class, 'deleteFoto']);
+
     Route::get('/getDataExplore', [ExploreController::class,'getdata']);
     Route::post('/likefotos',[ExploreController::class,'likefotos']);
     route::get('/other-pin/getDataPin/{id}', [PinController::class, 'getdatapin']);
@@ -59,6 +61,13 @@ Route::middleware('auth')->group(function(){
     Route::get('/pin', function () {
         return view('page.pin');
     });
+    // Route::get('/editfoto', function () {
+    //     return view('page.editfoto');
+    // });
+    Route::get('/viewEditFoto/{id}', [FotoController::class, 'viewEditFoto']);
+
+    Route::post('/processEditFoto/{id}', [FotoController::class, 'processEditFoto']);
+
     Route::get('/profil', [ChangepasswordController::class, 'editprofil']);
     Route::get('/changepassword', function () {
         return view('page.changepassword');
@@ -82,8 +91,10 @@ Route::middleware('auth')->group(function(){
     Route::post('/buat-album', [AlbumController::class, 'storeAlbum']);
     Route::get('/detailalbum/{id}', [AlbumController::class, 'detail']);
     Route::get('/buatalbum', [UserController::class, 'buatalbum']);
+    Route::get('/delete/{id}', [AlbumController::class, 'hapusAlbum']);
 
     Route::post('/Upload', [FotoController::class, 'upload_foto']);
+
 
     // End Web Route
 

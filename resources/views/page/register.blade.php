@@ -1,3 +1,7 @@
+@extends('layout.master')
+
+@section('content')
+
 <!doctype html>
 <html>
 <head>
@@ -15,16 +19,8 @@
   <link href="css/build.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="border-b-2 p-2 bg-blue-400">
-        <div class="flex w-1/2 m-auto max-w-screen-lg flex-row  justify-between">
-            <div class="font-playfair">PickSat</div>
-            <div class="flex gap-2">
-                <a href="/register"><button class="p-2 bg-blue-500 rounded-full px-4 py-2">Register</nutton></a>
-                <a href="/login"><button class="p-2 bg-slate-300 rounded-full px-4 py-2">Login</button></a>
-            </div>
-          </div>
-    </nav>
-    <h5 class="font-playfair text-4xl mb-3 mt-3 text-center">Register</h5>
+
+    <h5 class="font-playfair text-4xl mb-3 mt-10 text-center">Register</h5>
     <div class="bg-white shadow-lg w-1/4 p-2 mx-auto mt-15 rounded-xl px-11 ">
         <h2 class="font-playfair text-5xl text-center">PickSat</h2>
 
